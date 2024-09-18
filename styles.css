@@ -1,0 +1,287 @@
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+ul li img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    grid-area: header;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.layout {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.main {
+    grid-area: main;
+    height: 100vh;
+    background-image: url("images/background.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main h1,
+.main h2 {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+}
+
+.main h1 {
+    font-weight: bolder;
+    font-size: 300%;
+    align-items: center;
+    object-position: center;
+}
+
+.main span {
+    font-size: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: antiquewhite;
+}
+
+.footer {
+    background-color: black;
+    height: 40px;
+    margin: 0px;
+    padding: 10px 20px;
+}
+
+.details {
+    background-color: antiquewhite;
+    height: 550px;
+    width: 250px;
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: larger;
+    line-height: 30px;
+}
+
+.details label {
+    display: block;
+}
+
+input {
+    border: 2px solid red;
+    border-radius: 4px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    background-color: lightblue;
+    transition-duration: 0.3s;
+}
+
+button {
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    margin-top: 15px;
+    border-color: red;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: white;
+    color: red;
+    transition-duration: 0.4s;
+}
+
+form a {
+    margin-top: 10px;
+    margin-left: 80px;
+    font-size: small;
+    color: darkorchid;
+}
+
+form a:visited {
+    color: red;
+}
+
+.details2 {
+    background-color: antiquewhite;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: larger;
+    line-height: 30px;
+    flex-direction: column;
+}
+
+.details2 p {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0px;
+}
+
+.details2 label {
+    display: flex;
+    margin-top: 20px;
+}
+
+.details2 button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.outerbox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-rows: 300px 200px;
+    grid-auto-rows: 200px;
+    width: 700px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.box img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.box1 {
+    grid-column: 1/4;
+}
+
+.box2 {
+    grid-row: 2/4;
+}
+
+.servicetext {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+    font-size: 30px;
+    padding: 30px;
+    text-shadow: 4px 4px 2px black;
+    text-align: justify;
+}
+
+.servicetext p::first-letter {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    margin-left: 30px;
+    font-size: 50px;
+    color: rgb(193, 186, 171);
+}
+
+@media (max-width: 768px) {
+    .outerbox {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .box1 {
+        grid-column: 1/3;
+    }
+
+    .servicetext {
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 28px;
+    }
+
+    .servicetext p::first-letter {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .outerbox {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .box1,
+    .box2 {
+        grid-column: 1/2;
+    }
+
+    .servicetext {
+        width: 100%;
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .servicetext p::first-letter {
+        font-size: 40px;
+        margin-left: 10px;
+    }
+}
+.footer{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

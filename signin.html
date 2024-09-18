@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="layout">
+        <div class="header">
+            <ul>
+                <li><img src="images/logo.png" alt="Logo"></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="signin.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="details">
+                <form action="login.html">
+                    <label for="name">Full Name:</label>
+                    <input type="text" name="name" id="name" required placeholder="Fullname"><br>
+                    <label for="birth">Date of birth:</label>
+                    <input type="date" name="birth" id="birth" required><br>
+                    <label for="name">Email Address:</label>
+                    <input type="email" name="email" id="email" required placeholder="example@gmail.com"><br>
+                    <label for="name">Phone number:</label>
+                    <input type="tel" name="name" id="name" required placeholder="without country code"><br>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" required>
+                        <option value="" selected disabled>Choose</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" required placeholder="Username"><br>
+                    <label for="name">Password:</label>
+                    <input type="password" name="password" id="password" required placeholder="Password"><br>
+                    <button>Submit</button><br>
+                    <a href="login.html">Already have an account?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2024 Avengers Security Solutions. All Rights Reserved.</p>
+        <p>Phone no: 9373836483|9283938393</p>
+        <p>Email ID: starktower@gmail.com</p>
+    </div>
+    </div>
+</body>
+
+</html>
